@@ -43,10 +43,41 @@ void printLL(Node* head){
     cout<<endl;
     return;
 }
+Node* removeNthNodeFromEnd(Node* head,int n){
 
+Node* start=new Node(0);
+start->next=head;
+Node* slow=start;
+Node* fast=start;
+while(n>0){
+    fast=fast->next;
+    n--;
+}
+
+while(fast->next!=NULL){
+    slow=slow->next;
+    fast=fast->next;
+}
+
+slow->next=slow->next->next;
+
+return start->next;
+
+
+
+}
 int main(){
 
 Node* head=takeinput();
 
 printLL(head);
+
+// DELETING nth node from last of the linked list
+int n;
+cin>>n;
+head=removeNthNodeFromEnd(head,n);
+
+printLL(head);
+
+
 }
