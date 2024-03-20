@@ -48,8 +48,8 @@ while(data!=-1){
 
     public static void main(String[] args) {
         
-        ListNode head=takeInput();
-        print(head);
+        // ListNode head=takeInput();
+        // print(head);
      Scanner s=new Scanner(System.in);
         ListNode list1= takeInput();
         int a,b;
