@@ -58,7 +58,15 @@ return root;
 
 }
 
+void printinorder(TreeNode* root){
+   if(!root)return;
+   printinorder(root->left);
+   cout<<root->val<<" ";
+   printinorder(root->right);
+}
+
 int main(){
 
     TreeNode* root=takeinput();
+    printinorder(root);
 }
