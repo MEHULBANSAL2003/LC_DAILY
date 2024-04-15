@@ -2,17 +2,28 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+// class TreeNode {
+//     int val;
+//     TreeNode left;
+//     TreeNode right;
 
-    TreeNode(int val) {
-        this.val = val;
-    }
-}
+//     TreeNode(int val) {
+//         this.val = val;
+//     }
+// }
 
 public class april14 {
+
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+    
+        TreeNode(int val) {
+            this.val = val;
+        }
+    }
 
     public static TreeNode takeinput() {
         Scanner s = new Scanner(System.in);
@@ -21,7 +32,8 @@ public class april14 {
             s.close();
             return null;
         }
-        TreeNode root = new TreeNode(data);
+        april14 temp=new april14();
+        TreeNode root = temp.new TreeNode(data);
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         while (!q.isEmpty()) {
@@ -29,13 +41,13 @@ public class april14 {
 
             int leftchild = s.nextInt();
             if (leftchild != -1) {
-                TreeNode child = new TreeNode(leftchild);
+                TreeNode child = temp.new TreeNode(leftchild);
                 front.left = child;
                 q.add(child);
             }
             int rightchild = s.nextInt();
             if (rightchild != -1) {
-                TreeNode child = new TreeNode(rightchild);
+                TreeNode child = temp.new TreeNode(rightchild);
                 front.right = child;
                 q.add(child);
             }
