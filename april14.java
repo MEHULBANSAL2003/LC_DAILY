@@ -67,7 +67,7 @@ public class april14 {
     public static void main(String[] args) {
         TreeNode root = takeinput();
 
-        int ans = sumOfLeftLeaves(root);
+        int ans = sumOfLeftLeaves(root); 
         System.out.println(ans);
 
     }
