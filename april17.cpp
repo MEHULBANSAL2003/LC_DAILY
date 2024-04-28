@@ -63,7 +63,7 @@ void printinorder(TreeNode *root)
         return;
     printinorder(root->left);
     cout << root->val << " ";
-    printinorder(root->right);
+    printinorder(root->right); // sk
 }
 
 string ans="";
