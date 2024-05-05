@@ -42,6 +42,16 @@ void printLL(Node* head){
     return;
 }
 
+void deleteNode(Node* node) {
+               Node *nextNode = node->next;
+        // Step 2
+        node->data = nextNode->data;
+        // Step 3
+        node->next = nextNode->next;
+        nextNode->next = nullptr;
+      
+    }
+
 
 int main(){
 
